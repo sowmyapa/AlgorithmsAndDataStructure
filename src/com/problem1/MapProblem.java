@@ -20,6 +20,13 @@ public class MapProblem {
 	         phoneBook.put(name, phone);
 	      }
 		   Map<Integer,String> data = new HashMap<Integer,String>();
+		  /* Set<Map.Entry<Integer,String>> ent=data.entrySet();
+		   Iterator<Map.Entry<Integer,String>>  it = ent.iterator();
+		   while(it.hasNext()){
+		   	Map.Entry<Integer,String> key = it.next();
+		   	system.out.println(key.getKey()+"  "+key.getValue());
+		   }*/
+
 		   //Set<Map.Entry<Integer,String>> entries = data.entrySet();
 		   Set<Map.Entry<String,Integer>> entries = phoneBook.entrySet();
 		   Iterator<Map.Entry<String,Integer>> it = entries.iterator();
@@ -35,6 +42,9 @@ public class MapProblem {
 			   System.out.printf("%s = %s%n", key, value);
 
 		   }
+
+
+
 	      while(in.hasNext())
 	      {
 	         String s=in.nextLine();

@@ -21,5 +21,10 @@ public class RegexMatches1 {
         }else {
             System.out.println("NO MATCH");
         }
+
+
+        Pattern p = Pattern.compile(pattern);
+        Matcher m1 = p.matcher(line);
+
     }
 }
