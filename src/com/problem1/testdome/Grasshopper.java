@@ -1,15 +1,10 @@
-package com.problem1.braviant;
+package com.problem1.testdome;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
 
-public class Grasshopper1 {
+public class Grasshopper {
 
-
-
-    ArrayList<Integer> leaves;
+    boolean visited[];
     int curPosition;
     int n;
     /**
@@ -18,29 +13,25 @@ public class Grasshopper1 {
      * @param n Number of leaves in row.
      * @param position
      */
-    public Grasshopper1(int n, int position) {
+    public Grasshopper(int n, int position) {
         this.n = n;
-        leaves = new ArrayList<>(n);
-        for(int i=0;i<n;i++){
-            leaves.add(i+1);
-        }
+        visited = new boolean[n];
+        Arrays.fill(visited,false);
         this.curPosition = position-1;
-    }
-
-    public void print(){
-        for(int i=0;i<n;i++){
-            System.out.println("i :"+i+" leave : "+leaves.get(i));
-        }
     }
 
     /**
      * Grasshopper has eaten the current leaf and hopped left.
      */
     public void eatAndHopLeft() {
-        int oldPosition=curPosition;
-        curPosition=curPosition-2;
-        leaves.remove(oldPosition);
-
+        visited[curPosition]=true;
+        int numberOfMoves=2;
+        while(numberOfMoves>0){
+            --curPosition;
+            if(!visited[curPosition]){
+                numberOfMoves--;
+            }
+        }
     }
 
 
@@ -48,9 +39,14 @@ public class Grasshopper1 {
      * Grasshopper has eaten the current leaf and hopped right.
      */
     public void eatAndHopRight() {
-        int oldPosition=curPosition;
-        curPosition=curPosition+2;
-        leaves.remove(oldPosition);
+        visited[curPosition]=true;
+        int numberOfMoves=2;
+        while(numberOfMoves>0){
+            curPosition++;
+            if(!visited[curPosition]){
+                numberOfMoves--;
+            }
+        }
     }
 
     /**
@@ -59,7 +55,7 @@ public class Grasshopper1 {
      * @return Leaf number that grasshopper is feeding on right now.
      */
     public int whereAmI() {
-        return leaves.get(curPosition);
+        return curPosition+1;
     }
 
     public static void main(String[] args) {
@@ -92,24 +88,6 @@ public class Grasshopper1 {
 
         System.out.println(" ------------  ");
         g.print();
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

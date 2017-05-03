@@ -1,4 +1,4 @@
-package com.problem1.braviant;
+package com.problem1.testdome;
 
 enum Side { NONE, LEFT, RIGHT }
 

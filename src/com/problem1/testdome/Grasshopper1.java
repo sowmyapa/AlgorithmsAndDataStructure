@@ -1,10 +1,12 @@
-package com.problem1.braviant;
+package com.problem1.testdome;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
-public class Grasshopper {
+public class Grasshopper1 {
 
-    boolean visited[];
+
+
+    ArrayList<Integer> leaves;
     int curPosition;
     int n;
     /**
@@ -13,25 +15,29 @@ public class Grasshopper {
      * @param n Number of leaves in row.
      * @param position
      */
-    public Grasshopper(int n, int position) {
+    public Grasshopper1(int n, int position) {
         this.n = n;
-        visited = new boolean[n];
-        Arrays.fill(visited,false);
+        leaves = new ArrayList<>(n);
+        for(int i=0;i<n;i++){
+            leaves.add(i+1);
+        }
         this.curPosition = position-1;
+    }
+
+    public void print(){
+        for(int i=0;i<n;i++){
+            System.out.println("i :"+i+" leave : "+leaves.get(i));
+        }
     }
 
     /**
      * Grasshopper has eaten the current leaf and hopped left.
      */
     public void eatAndHopLeft() {
-        visited[curPosition]=true;
-        int numberOfMoves=2;
-        while(numberOfMoves>0){
-            --curPosition;
-            if(!visited[curPosition]){
-                numberOfMoves--;
-            }
-        }
+        int oldPosition=curPosition;
+        curPosition=curPosition-2;
+        leaves.remove(oldPosition);
+
     }
 
 
@@ -39,14 +45,9 @@ public class Grasshopper {
      * Grasshopper has eaten the current leaf and hopped right.
      */
     public void eatAndHopRight() {
-        visited[curPosition]=true;
-        int numberOfMoves=2;
-        while(numberOfMoves>0){
-            curPosition++;
-            if(!visited[curPosition]){
-                numberOfMoves--;
-            }
-        }
+        int oldPosition=curPosition;
+        curPosition=curPosition+2;
+        leaves.remove(oldPosition);
     }
 
     /**
@@ -55,7 +56,7 @@ public class Grasshopper {
      * @return Leaf number that grasshopper is feeding on right now.
      */
     public int whereAmI() {
-        return curPosition+1;
+        return leaves.get(curPosition);
     }
 
     public static void main(String[] args) {
@@ -88,6 +89,24 @@ public class Grasshopper {
 
         System.out.println(" ------------  ");
         g.print();
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

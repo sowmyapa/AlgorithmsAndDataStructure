@@ -1,4 +1,4 @@
-package com.problem1.braviant;
+package com.problem1.testdome;
 
 import java.util.*;
 
@@ -83,6 +83,6 @@ public class Sum3 {
 
 
         System.out.println(s.containsSum3(11));
-        s.printSum();;
+        //s.printSum();;
     }
 }
