@@ -1,11 +1,12 @@
 package com.problem1.testdome;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Grasshopper1 {
 
 
-
+    LinkedList list;
     ArrayList<Integer> leaves;
     int curPosition;
     int n;
@@ -16,6 +17,7 @@ public class Grasshopper1 {
      * @param position
      */
     public Grasshopper1(int n, int position) {
+
         this.n = n;
         leaves = new ArrayList<>(n);
         for(int i=0;i<n;i++){
@@ -60,7 +62,7 @@ public class Grasshopper1 {
     }
 
     public static void main(String[] args) {
-        Grasshopper1 g = new Grasshopper1(100, 3);
+        Grasshopper1 g = new Grasshopper1(5, 2);
         System.out.println(g.whereAmI());
 
         g.eatAndHopRight();
@@ -69,7 +71,7 @@ public class Grasshopper1 {
         g.eatAndHopLeft();
         System.out.println(g.whereAmI());
 
-        g.eatAndHopRight();
+        /*g.eatAndHopRight();
         System.out.println(g.whereAmI());
 
         g.eatAndHopRight();
@@ -87,8 +89,8 @@ public class Grasshopper1 {
         g.eatAndHopRight();
         System.out.println(g.whereAmI());
 
-        System.out.println(" ------------  ");
-        g.print();
+        System.out.println(" ------------  ");*/
+        //g.print();
 
     }
 

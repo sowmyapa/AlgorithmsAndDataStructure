@@ -7,7 +7,8 @@ import java.util.Scanner;
  *
  * (Largest block)
 
- Given a square matrix with the elements 0 or 1, write a program to find a maximum square submatrix whose elements are all 1s. Your program should prompt the user to enter the number of rows in the matrix. The program then displays the location of the first element in the maximum square submatrix and the number of the rows in the submatrix.
+ Given a square matrix with the elements 0 or 1, write a program to find a maximum square submatrix whose elements are all 1s. Your program should prompt the user to enter the number of rows in the matrix.
+ The program then displays the location of the first element in the maximum square submatrix and the number of the rows in the submatrix.
  Here is a sample run:
 
  Enter the number of rows in the matrix:

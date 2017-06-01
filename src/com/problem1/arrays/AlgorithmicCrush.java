@@ -9,7 +9,8 @@ import java.util.*;
  *
  *
  *
- * You are given a list of size , initialized with zeroes. You have to perform  operations on the list and output the maximum of final values of all the  elements in the list. For every operation, you are given three integers ,  and  and you have to add value  to all the elements ranging from index  to (both inclusive).
+ * You are given a list of size , initialized with zeroes. You have to perform  operations on the list and output the maximum of final values of all the  elements in the list.
+ * For every operation, you are given three integers ,  and  and you have to add value  to all the elements ranging from index  to (both inclusive).
 
  Input Format
 

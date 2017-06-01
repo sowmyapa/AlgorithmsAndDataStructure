@@ -8,10 +8,10 @@ public class DoublyLinkedList {
     Node head;
     int count;
 
-    class Node{
-        int value;
-        Node next;
-        Node prev;
+    public class Node{
+        public int value;
+        public Node next;
+        public Node prev;
 
         Node(int value,Node next, Node prev){
             this.value = value;
@@ -22,6 +22,22 @@ public class DoublyLinkedList {
     }
 
 
+    public Node retrieveByIndex(int index){
+        if(index>=count){
+            System.out.println("Invalid index");
+        }else{
+            int pos=0;
+            Node temp= head;
+            while(temp.next!=null && pos+1!=index){
+                temp=temp.next;
+                pos++;
+            }
+            if(temp!=null && pos+1==index){
+                return temp;
+            }
+        }
+        return null;
+    }
 
 
     public static void main(String[] args){
@@ -40,6 +56,8 @@ public class DoublyLinkedList {
 
 
     }
+
+
 
     private void removeAtEnd() {
         Node temp = head;
@@ -85,15 +103,19 @@ public class DoublyLinkedList {
 
     }
 
-    private void removeByValue(int value) {
+    public void removeByValue(int value) {
         Node temp = head;
         while(temp!=null && temp.value!=value){
             temp = temp.next;
         }
         if(temp!=null){
             count--;
-            temp.prev.next=temp.next;
-            temp.next.prev=temp.prev;
+            if(temp.prev!=null) {
+                temp.prev.next = temp.next;
+            }
+            if(temp.next!=null) {
+                temp.next.prev = temp.prev;
+            }
         }
     }
 
@@ -145,7 +167,7 @@ public class DoublyLinkedList {
 
     }
 
-    private void add(int value) {
+    public void add(int value) {
         Node node = new Node(value,null,null);
         count++;
         if (head == null) {

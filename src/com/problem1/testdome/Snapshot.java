@@ -16,7 +16,6 @@ public class Snapshot {
     public ArrayList<Integer> restore()
     {
         //return this.data;
-        List<Integer> unmodifiableList =Collections.unmodifiableList(this.data);
         return  new ArrayList<>(Collections.unmodifiableCollection(this.data));
     }
 

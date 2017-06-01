@@ -7,9 +7,10 @@ public class BalancedParenthesisGD {
     {
         String test_good = "()(){}{}{()}";
         String test_bad = "((({}{}))()";
+        String test="{}[]()";
 
-        System.out.println(checkBalanced(test_good));
-        System.out.println(checkBalanced(test_bad));
+        System.out.println(checkBalanced(test));
+        //System.out.println(checkBalanced(test_bad));
     }
 
     public static boolean checkBalanced(String temp)
@@ -17,6 +18,8 @@ public class BalancedParenthesisGD {
         Stack<Character> S = new Stack<Character>();
         for(int a = 0; a < temp.length(); a++)
         {
+
+
             char let = temp.charAt(a);
             if(let == '[' || let == '{' || let == '(')
                 S.push(let);

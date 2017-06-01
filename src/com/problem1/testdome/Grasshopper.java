@@ -53,13 +53,14 @@ public class Grasshopper {
      * Return the leaf number that grasshopper is feeding on right now.
      *
      * @return Leaf number that grasshopper is feeding on right now.
+     *
      */
     public int whereAmI() {
         return curPosition+1;
     }
 
     public static void main(String[] args) {
-        Grasshopper1 g = new Grasshopper1(100, 3);
+        Grasshopper g = new Grasshopper(100, 3);
         System.out.println(g.whereAmI());
 
         g.eatAndHopRight();
@@ -87,7 +88,7 @@ public class Grasshopper {
         System.out.println(g.whereAmI());
 
         System.out.println(" ------------  ");
-        g.print();
+        //g.print();
     }
 
 }
