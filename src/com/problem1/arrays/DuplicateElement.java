@@ -12,6 +12,7 @@ public class DuplicateElement {
         int n = in.nextInt();
         int[] input = new int[n];
         int sum=0;
+        in.nextLine();
         int sumOfSquares=0;
         for(int i=0; i<n ;i++){
             input[i] = in.nextInt();

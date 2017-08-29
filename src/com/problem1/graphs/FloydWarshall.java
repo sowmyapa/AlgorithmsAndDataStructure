@@ -3,7 +3,8 @@ package com.problem1.graphs;
 import java.util.Arrays;
 
 /**
- * Created by sowmyaparameshwara on 3/13/17.
+ * http://www.geeksforgeeks.org/dynamic-programming-set-16-floyd-warshall-algorithm/
+ * The Floyd Warshall Algorithm is for solving the All Pairs Shortest Path problem. The problem is to find shortest distances between every pair of vertices in a given edge weighted directed Graph.
  */
 public class FloydWarshall {
 

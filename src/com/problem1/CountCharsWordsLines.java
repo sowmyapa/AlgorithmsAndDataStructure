@@ -32,6 +32,11 @@ public class CountCharsWordsLines {
         System.out.println("words: "+words);
         System.out.println("lines: "+lines);
 
+        StringTokenizer s = new StringTokenizer("ht/22/33","/");
+        while(s.hasMoreElements()){
+            System.out.println("Has more elements: "+s.nextToken());
+        }
+
 
     }
 }

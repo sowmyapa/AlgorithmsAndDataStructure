@@ -30,6 +30,12 @@ public class IsUnique {
         return true;
     }
 
+    /**
+     * 1<<val
+     * Shifts binary 1(01) by val times to the left.
+     * @param word
+     * @return
+     */
     private static boolean isUnique2(String word) {
         if(word.length()>26){
             return true;

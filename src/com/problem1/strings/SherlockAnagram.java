@@ -3,6 +3,9 @@ package com.problem1.strings;
 import java.io.*;
 import java.util.*;
 
+/**
+ * https://www.hackerrank.com/challenges/sherlock-and-anagrams
+ */
 public class SherlockAnagram {
 
     public static void main(String[] args) {
@@ -15,7 +18,7 @@ public class SherlockAnagram {
             s=in.next();
             n=s.length();
             int p=0,t=0;
-            int z =(n*n)-(((n*n)-n)/2);
+            int z =(n*n)-(((n*n)-n)/2); //the number of possible sub-strings is the sum of all integers from 1 to n. ie., n(n+1)/2
             String[] posi = new String[z];
             for(int x=0;x<n;x++){
                 for (int y=x; y<n ;y++){

@@ -1,8 +1,6 @@
 package com.problem1.testdome;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class TrainComposition {
     LinkedList<Integer> wagonList = new LinkedList();

@@ -29,9 +29,9 @@ public class CoinDenomination {
         numberOfWaysOfDoingNcents[0]=1;
 
         for(int cents : denominations){
-            for(int higherAmount = cents; higherAmount<=amount;higherAmount++){
-                int higherAmountRemainder = higherAmount-cents;
-                numberOfWaysOfDoingNcents[higherAmount]+= numberOfWaysOfDoingNcents[higherAmountRemainder];
+            for(int i = cents; i<=amount;i++){
+                int higherAmountRemainder = i-cents;
+                numberOfWaysOfDoingNcents[i]+= numberOfWaysOfDoingNcents[higherAmountRemainder];
             }
         }
         return numberOfWaysOfDoingNcents[amount];

@@ -20,6 +20,7 @@ public class EqualPointStringOfBrackets {
         int[] open = new int[input.length()];
         int[] close = new int[input.length()];
 
+
         if(input.charAt(0)=='('){
             open[1]=1;
         }

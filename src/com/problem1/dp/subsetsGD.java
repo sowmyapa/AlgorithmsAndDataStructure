@@ -5,7 +5,7 @@ import java.util.ArrayList;
 class subsetsGD
  {
 	 String s = "abcd";
- 	String[] str = new String[(int)Math.pow(2,s.length())];
+ 	String[] str = new String[(int)Math.pow(2,s.length())];//number of subsets of a given set 2 pow n
  	static ArrayList<String> str1 = new ArrayList<String>();
  	
     public static void combinations(String suffix,String prefix){

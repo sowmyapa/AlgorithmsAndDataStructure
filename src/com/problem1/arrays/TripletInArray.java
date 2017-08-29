@@ -35,7 +35,7 @@ public class TripletInArray {
                 }else if(value<toBeCompared){
                     l++;
                 }else{
-                    r++;
+                    r--;
                 }
 
             }
