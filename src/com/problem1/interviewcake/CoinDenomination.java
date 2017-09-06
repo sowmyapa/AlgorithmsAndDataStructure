@@ -34,6 +34,9 @@ public class CoinDenomination {
                 numberOfWaysOfDoingNcents[i]+= numberOfWaysOfDoingNcents[higherAmountRemainder];
             }
         }
+        long[] numberOfWays = new long[amount+1];
+
         return numberOfWaysOfDoingNcents[amount];
+
     }
 }
