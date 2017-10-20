@@ -53,7 +53,12 @@ public class RotatedPalindromeString {
     }
 
     private static boolean isRotatedPalindromeEvenLength(String input) {
+        for(int i=0;i<input.length();i++) {
+
+        }
         boolean isPalindrome=true;
+
+
         char prev=input.charAt(0);
         char cur;
         outer: for(int i=1;i<input.length();i++) {
