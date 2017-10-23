@@ -1,11 +1,23 @@
 package com.problem1;
 
-/**
- * Created by sowmyaparameshwara on 10/20/17.
- */
 public class RefDash1 {
 
-    /*
+}
+
+/*
+package com.problem1;
+
+import java.util.Arrays;
+
+*/
+/**
+ * Created by sowmyaparameshwara on 10/20/17.
+ *//*
+
+public class RefDash1 {
+
+    */
+/*
 5 4 3 2 1 5 2 4 5 1 1 2 3  0
 1 1 1 1 1
     5 4 3 2 1
@@ -19,7 +31,8 @@ public class RefDash1 {
 
 
 
-*/
+*//*
+
     int findMinimumCandies(int[] studentRanks){
         int[] candies = new int[studentRanks.length];
         int slopeStartIndex=0;
@@ -52,15 +65,16 @@ public class RefDash1 {
 
         }
 
-    }
-
-}
+*/
 
 
 
 
 
-    int findMinimumCandies(int[] studentRanks){
+
+
+
+    /*int findMinimumCandies(int[] studentRanks){
         int[] candies = new int[studentRanks.length];
         Arrays.fill(candies,1);
         for(int i=0 ; i< studentRanks.length-1;i++){
@@ -79,6 +93,6 @@ public class RefDash1 {
             totalCandies+=candies[i];
         }
         return totalCandies;
-    }
+    }*/
 
-}
+
