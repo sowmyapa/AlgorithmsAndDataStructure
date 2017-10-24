@@ -1,7 +1,5 @@
 package com.problem1.machinezone;
 
-import com.problem1.interviewcake.MergingOverlappingIntervals;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
